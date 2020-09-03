@@ -15,6 +15,18 @@ var express = require('express');
         }
   });
 });
+router.get('/:ngo_email',function(req,res,next){
+    Nop.ngoNopbyNgoId(req.params.ngo_email,function(err,rows){
+        if(err)
+        {
+            res.json(err);
+        }
+        else
+        {
+            res.json(rows);
+        }
+  });
+});
     
     
 module.exports=router;
