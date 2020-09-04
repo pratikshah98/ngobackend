@@ -20,6 +20,10 @@ var register1=require('./ngo_ routes/register1_routes');
 var register2=require('./ngo_ routes/register2_routes');
 var register3=require('./ngo_ routes/register3_routes');
 var ngocontactdetailRouter=require('./donor_routes/ngocontactdetail_routes');
+var viewprofilebyngoid=require('./ngo_ routes/viewprofilebyngoid_routes');
+var updateprofile1=require('./ngo_ routes/updateprofile1_routes');
+var updateprofile2=require('./ngo_ routes/updateprofile2_routes');
+var updateprofile3=require('./ngo_ routes/updateprofile3_routes');
 var app = express();
 
 // view engine setup
@@ -50,7 +54,10 @@ app.use('/register1',register1);
 app.use('/register2',register2);
 app.use('/register3',register3);
 app.use('/ngocontactdetail',ngocontactdetailRouter);
-
+app.use('/viewprofile',viewprofilebyngoid);
+app.use('/updateprofile1',updateprofile1);
+app.use('/updateprofile2',updateprofile2);
+app.use('/updateprofile3',updateprofile3);
 // app.use('/forgetpassword',forgetpasswordRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
