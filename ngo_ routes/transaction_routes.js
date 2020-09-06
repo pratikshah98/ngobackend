@@ -15,8 +15,8 @@ var express = require('express');
         }
 });
 });
-router.get('/:nop_name',function(req,res,next){
-    transaction.getAllTransactionByNopName(req.params.nop_name,function(err,rows){
+router.get('/:nop_name/:ngo_email',function(req,res,next){
+    transaction.getAllTransactionByNopName(req.params.nop_name,req.params.ngo_email,function(err,rows){
         if(err)
         {
             res.json(err);
