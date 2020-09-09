@@ -6,13 +6,13 @@ var demo={
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: '',
-    pass: ''
+    user: 'ngofinder27@gmail.com',
+    pass: 'Ngo@1234'
   }
 });
 
 var mailOptions = {
-    from: '',
+    from: 'ngofinder27@gmail.com',
     to: demo.to,
     subject:demo.subject,
   //  text: demo.message
