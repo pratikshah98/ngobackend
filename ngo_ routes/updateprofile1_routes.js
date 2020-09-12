@@ -15,9 +15,11 @@ var storage = multer.diskStorage({
   });
   var upload = multer({ storage: storage });
 
-router.put('/:id?',function(req,res,next){
-    register.updateprofile1(req.params.id,req.body,req.file.filename,function(err,rows){
-        if(err)
+router.put('/',upload.single('ngo_logo'),function(req,res,next){
+  
+    register.updateprofile1(req.body,req.file.filename,function(err,rows){
+      console.log(rows);  
+      if(err)
         {
             res.json(err);
         }

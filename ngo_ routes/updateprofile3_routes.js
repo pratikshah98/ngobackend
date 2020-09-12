@@ -3,8 +3,8 @@ var register=require('../ngo_ models/registration_model')
 var express=require('express');
 var router=express.Router();
 
-router.put('/:id?',function(req,res,next){
-register.updateprofile3(req.params.id,req.body,function(err,rows){
+router.put('/',function(req,res,next){
+register.updateprofile3(req.body,function(err,rows){
         if(err)
         {
             res.json(err);

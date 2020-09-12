@@ -15,7 +15,7 @@ var storage = multer.diskStorage({
   });
   var upload = multer({ storage: storage });
 
-  router.post('/',upload.single('proof_image'),function(req,res,next){
+  router.put('/',upload.single('proof_image'),function(req,res,next){
     register.register2(req.body,req.file.filename,function(err,rows){
         if(err)
         {
