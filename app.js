@@ -26,6 +26,8 @@ var updateprofile1=require('./ngo_ routes/updateprofile1_routes');
 var updateprofile2=require('./ngo_ routes/updateprofile2_routes');
 var updateprofile3=require('./ngo_ routes/updateprofile3_routes');
 var event=require('./ngo_ routes/event_routes');
+
+var paytm_geteway=require('./donor_routes/paytm_gateway_route');
 var app = express();
 
 // view engine setup
@@ -61,6 +63,8 @@ app.use('/updateprofile1',updateprofile1);
 app.use('/updateprofile2',updateprofile2);
 app.use('/updateprofile3',updateprofile3);
 app.use('/event',event);
+app.use('/paytm',paytm_geteway);
+
 // app.use('/forgetpassword',forgetpasswordRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
